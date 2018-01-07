@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="5"><input type="text" id="display"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="7" onclick="addDigit('7')"></td>
+      <td><input type="button" value="8" onclick="addDigit('8')"></td>
+      <td><input type="button" value="9" onclick="addDigit('9')"></td>
+      <td><input type="button" value="+" onclick="operate('+')"></td>
+      <td rowspan="2"><input type="button" value="AC" onclick="allClear()" id="allClear"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="4" onclick="addDigit('4')"></td>
+      <td><input type="button" value="5" onclick="addDigit('5')"></td>
+      <td><input type="button" value="6" onclick="addDigit('6')"></td>
+      <td><input type="button" value="-" onclick="operate('-')"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="1" onclick="addDigit('1')"></td>
+      <td><input type="button" value="2" onclick="addDigit('2')"></td>
+      <td><input type="button" value="3" onclick="addDigit('3')"></td>
+      <td><input type="button" value="*" onclick="operate('*')"></td>
+      <td rowspan="2"><input type="button" value="C" onclick="Clear()" id="clear"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="." onclick="decimal()"></td>
+      <td><input type="button" value="0" onclick="addDigit('0')"></td>
+      <td><input type="button" value="=" onclick="equate()" class="equal"></td>
+      <td><input type="button" value="/" onclick="operate('/')"></td>
+    </tr>
+  </table>
+  <h4><a href="./history">Click here for the history of your calculations</h4><a></h4>
+  <script type="text/javascript" src="{% static 'script.js'%}"></script>
+</body>
+</html>

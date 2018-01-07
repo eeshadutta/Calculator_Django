@@ -1,0 +1,29 @@
+table {
+  background-color: #2E9AFE;
+  padding: 5px;
+  border: 5px solid black;
+}
+input {
+  padding: 8px 20px 8px 20px;
+  background-color: #E0F8F7;
+  border-radius: 5px;
+}
+td {
+  margin: 5px;
+  padding: 1px 2px;
+  text-align: center;
+  border: 1px dotted blue;
+}
+tr {
+  margin: 5px;
+}
+#display{
+  width: 300px;
+  height: 50px;
+}
+#clear {
+  padding:30px 15px;
+}
+#allClear {
+  padding: 30px 10px;
+}

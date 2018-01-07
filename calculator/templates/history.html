@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>History</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="{% static 'history.css' %}" />
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Operator1</th>
+      <th>Operator</th>
+      <th>Operator2</th>
+    </tr>
+    {% for calculation in calculations %}
+      <tr>
+        <td>{{ calculation.operand1 }}</td>
+        <td>{{ calculation.operator }}</td>
+        <td>{{ calculation.operand2 }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
